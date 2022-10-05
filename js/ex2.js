@@ -1,0 +1,12 @@
+let numlist = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+const odds = numlist.filter( ( element, index ) => { return element % 2 != 0; } );
+const divisibles = numlist.filter( ( element, index ) => { return ( element % 2 === 0 || element % 5 === 0 ); } );
+const threes = numlist.filter( ( element, index ) => { return element % 3 === 0; } );
+const threesSquared = threes.map( num => { return num * num; } );
+const fives = numlist.filter( ( element, index ) => { return element % 5 === 0; } );
+const fivesSquared = fives.map( num => { return num * num; } );
+const sumOfFivesSquared = fivesSquared.reduce( ( sum, x ) => { return sum + x; } );
+console.log( odds );
+console.log( divisibles );
+console.log( threesSquared );
+console.log( sumOfFivesSquared );
